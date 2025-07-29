@@ -33,6 +33,7 @@ export const Layout = () => {
             payload: dataApi
         })
     }
+    
 
     useEffect(() => { getTailedBeastsApi(), getAkatsukiApi(), getCharacterApi() }, [])
     return (

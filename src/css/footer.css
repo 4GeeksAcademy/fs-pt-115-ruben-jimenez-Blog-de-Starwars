@@ -1,0 +1,9 @@
+.footer {
+    --background: linear-gradient(to left, #f3bf47 0%, #df3b40 100%);
+    overflow: visible;
+    background: #f7ba2b;
+    background: var(--background);
+    position: relative;
+    z-index: 1;
+    color: black !important;
+}

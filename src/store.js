@@ -2,7 +2,8 @@ export const initialStore = () => {
   return {
     characters: [],
     akatsuki: [],
-    tailedBeasts: []
+    tailedBeasts: [],
+    favoritos: []
   }
 }
 
@@ -24,7 +25,21 @@ export default function storeReducer(store, action = {}) {
           ...store,
           tailedBeasts: action.payload
         }
+      case 'add_favoritos':
+        const existe =store.favoritos.some(favorito=>favorito.id=== action.payload.id);
+        if(existe)return store;
+        // si ya esta, no lo añadas
+        return{
+          ...store,
+          favoritos:[...store.favoritos, action.payload]
+        }
+      case 'delete_favoritos':
+        return{
+          ...store,
+          favoritos: store.favoritos.filter(favorito=>(favorito.id !== action.id ))
+        }
     default:
       throw Error('Unknown action.');
   }
 }
+

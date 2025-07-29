@@ -13,3 +13,6 @@
   max-height: 200px; /* límite vertical opcional */
   object-fit: cover; /* opcional: recorta la imagen si es necesario */
 }
+*body{
+  background: #dd720e;
+}

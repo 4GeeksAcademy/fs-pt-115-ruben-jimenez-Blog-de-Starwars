@@ -1,0 +1,130 @@
+.contaoner-card-home {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    gap: 16px;
+}
+.contaoner-card-home .card img {
+  display: block; /* elimina espacios inline y mejora layout */
+  width: 100%;
+  max-width: 320px; /* ancho máximo deseado */
+  height: auto; /* mantiene la proporción original */
+  max-height: 180px; /* límite vertical opcional */
+  object-fit: cover; /* opcional: recorta la imagen si es necesario */
+   border-radius: 10px;
+}
+.card {
+  --background: linear-gradient(to left, #f7ba2b 0%, #ea5358 100%);
+  width: 360px;
+  height: 300px;
+  padding: 5px;
+  border-radius: 1rem;
+  overflow: visible;
+  background: #f7ba2b;
+  background: var(--background);
+  position: relative;
+  z-index: 1;
+  color: black !important;
+}
+
+.card::after {
+  position: absolute;
+  content: "";
+  top: 30px;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  transform: scale(0.8);
+  filter: blur(25px);
+  background: #f7ba2b;
+  background: var(--background);
+  transition: opacity .5s;
+}
+
+.card-info {
+  --color: #181818;
+  background: var(--color);
+  color: var(--color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  border-radius: .7rem;
+}
+
+.card .title {
+  font-weight: bold;
+  letter-spacing: .1em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+/*Hover*/
+.card:hover::after {
+  opacity: 0;
+}
+
+.card:hover .card-info {
+  color: #f7ba2b;
+  transition: color 1s;
+}
+
+/* -------------------------------------(boton-info) */
+/*boton info*/
+#info-btn {
+  background: #fbca1f !important;
+  font-family: inherit;
+  padding: 0.3em 0.6em !important;
+  font-weight: 900;
+  font-size: 14px;
+  border: 3px solid black !important;
+  border-radius: 0.4em;
+  box-shadow: 0.1em 0.1em;
+  cursor: pointer;
+  color: black !important;
+}
+
+#info-btn:hover {
+  transform: translate(-0.05em, -0.05em);
+  box-shadow: 0.15em 0.15em;
+}
+
+#info-btn:active {
+  transform: translate(0.05em, 0.05em);
+  box-shadow: 0.05em 0.05em;
+}
+
+/* -------------------------------------(boton-info) */
+/* -------------------------------------(boton-favorito) */
+#favorito-btn {
+  background: #fbca1f !important;
+  font-family: inherit;
+  padding: 0.3em 0.6em !important;
+  font-weight: 900;
+  font-size: 14px;
+  border: 3px solid black !important;
+  border-radius: 0.4em;
+  box-shadow: 0.1em 0.1em;
+  cursor: pointer;
+  color: black !important;
+}
+
+#favorito-btn:hover {
+  transform: translate(-0.05em, -0.05em);
+  box-shadow: 0.15em 0.15em;
+}
+
+#favorito-btn:active {
+  transform: translate(0.05em, 0.05em);
+  box-shadow: 0.05em 0.05em;
+  background: #fb1f1f !important;
+}
+
+/* -------------------------------------(boton-favorito) */

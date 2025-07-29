@@ -1,0 +1,50 @@
+.navbar {
+    --background: linear-gradient(to left, #f3bf47 0%, #df3b40 100%);
+    overflow: visible;
+    background: #f7ba2b;
+    background: var(--background);
+    position: relative;
+
+    color: black !important;
+}
+/* --------------------------------------------(favoritos) */
+#info-btn {
+  background: #fbca1f !important;
+  font-family: inherit;
+  padding: 0.6em 0.6em !important;
+  font-weight: 900;
+  font-size: 14px;
+  border: 3px solid black !important;
+  border-radius: 0.4em;
+  box-shadow: 0.1em 0.1em;
+  cursor: pointer;
+  color: black !important;
+}
+
+#info-btn:hover {
+  transform: translate(-0.05em, -0.05em);
+  box-shadow: 0.15em 0.15em;
+}
+
+#info-btn:active {
+  transform: translate(0.05em, 0.05em);
+  box-shadow: 0.05em 0.05em;
+}
+/* --------------------------------------------(favoritos) */
+/* --------------------------------------------(input) */
+.input {
+  border: none;
+  outline: none;
+  border-radius: 15px;
+  padding: 1em;
+  background-color: #ccc;
+  box-shadow: inset 2px 5px 10px rgba(0,0,0,0.3);
+  transition: 300ms ease-in-out;
+}
+
+.input:focus {
+  background-color: white;
+  transform: scale(1.05);
+  box-shadow: 13px 13px 100px #969696,
+             -13px -13px 100px #ffffff;
+}
