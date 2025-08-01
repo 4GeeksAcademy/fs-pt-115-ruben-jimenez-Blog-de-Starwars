@@ -3,7 +3,12 @@
     overflow: visible;
     background: #f7ba2b;
     background: var(--background);
-    position: relative;
+   
     z-index: 1;
     color: black !important;
+    /*clabarlo en el fondo */
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    position: fixed;
 }

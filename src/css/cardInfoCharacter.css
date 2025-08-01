@@ -1,0 +1,80 @@
+.card-character {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 2000px;
+    margin: 20px auto;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #ffe5b4; /* naranja pálido */
+    font-family: Arial, sans-serif;
+}
+
+/* img */
+.card-img {
+    flex: 0 0 300px;
+    max-width: 300px;
+    overflow-y: auto;
+    border-right: 1px solid #eee;
+    background-color:#ffe5b4; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    gap: 10px;
+}
+
+.card-img img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+/* texto */
+.card-body {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    max-height: 600px;
+}
+
+.card-title {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.card-text {
+    margin-bottom: 10px;
+    word-wrap: break-word;
+}
+
+/* intento 9 scroll horizontal*/
+.card-text strong + span,
+.card-text strong + p,
+.card-text strong + div {
+    overflow-x: auto;
+    scrollbar-color: transparent transparent; 
+    scroll-behavior: smooth;
+    display: block;
+    max-width: 100%;
+}
+
+
+/* "RESPONSIVE": si es que sale */
+@media (max-width: 768px) {
+    .card-character {
+        flex-direction: column;
+    }
+    .card-img {
+        flex: none;
+        max-width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #eee;
+    }
+
+    .card-body {
+        max-height: none;
+    }
+}

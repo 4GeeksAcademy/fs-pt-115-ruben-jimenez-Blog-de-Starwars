@@ -5,7 +5,7 @@ import "../css/card.css"
 export const Card = ({ character, nija }) => {
     const { store, dispatch } = useGlobalReducer()
 
-        ;
+       
 
     console.log(store.favoritos)
     return (

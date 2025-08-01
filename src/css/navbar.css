@@ -43,8 +43,39 @@
 }
 
 .input:focus {
-  background-color: white;
+  background-color: #f7ba2b;
   transform: scale(1.05);
   box-shadow: 13px 13px 100px #969696,
              -13px -13px 100px #ffffff;
+}
+/* --------------------------------------------(search wrapper para posicionar) Para que el navbar no se multiplique de tamaño */
+.search-wrapper {
+  position: relative;
+}
+
+/* --------------------------------------------(resultados del buscador) */
+.search-results {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  max-height: 200px;
+  overflow-y: auto;
+  background:  #f7ba2b;
+  border: 1px solid #ccc;
+  z-index: 1000;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.search-results li {
+  padding: 8px;
+  cursor: pointer;
+}
+
+.search-results li:hover,
+.search-results li:focus {
+  background-color: #fbca1f;
+  outline: none;
 }

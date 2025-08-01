@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
 import useGlobalReducer from "../hooks/useGlobalReducer"
 import { useEffect, useState } from "react";
-
+import "../css/cardInfoCharacter.css"
 
 export const CardInfoCharacter = () => {
     const { store } = useGlobalReducer();
@@ -41,6 +41,7 @@ export const CardInfoCharacter = () => {
 
     return (
         <div className=" card-character">
+            <div className=" card-img">
             {urlStore.images?.map((img, index) => (
                 <img
                     key={index}
@@ -49,7 +50,7 @@ export const CardInfoCharacter = () => {
                     alt={urlStore.name}
                 />
             ))}
-
+            </div>
             <div className="card-body">
                 <h5 className="card-title">{urlStore.name}</h5>
 

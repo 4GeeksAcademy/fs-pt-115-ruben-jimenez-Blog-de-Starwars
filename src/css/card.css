@@ -1,19 +1,28 @@
 .contaoner-card-home {
-    display: flex;
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    scroll-behavior: smooth;
-    gap: 16px;
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  scrollbar-color: rgba(0, 0, 0, 0.3) transparent; 
+  scroll-behavior: smooth;
+  gap: 16px;
+  background-color: rgba(0,0,0,0)!important;
 }
+
 .contaoner-card-home .card img {
-  display: block; /* elimina espacios inline y mejora layout */
+  display: block;
+  /* elimina espacios inline y mejora layout */
   width: 100%;
-  max-width: 320px; /* ancho máximo deseado */
-  height: auto; /* mantiene la proporción original */
-  max-height: 180px; /* límite vertical opcional */
-  object-fit: cover; /* opcional: recorta la imagen si es necesario */
-   border-radius: 10px;
+  max-width: 320px;
+  /* ancho máximo deseado */
+  height: auto;
+  /* mantiene la proporción original */
+  max-height: 180px;
+  /* límite vertical opcional */
+  object-fit: cover;
+  /* opcional: recorta la imagen si es necesario */
+  border-radius: 10px;
 }
+
 .card {
   --background: linear-gradient(to left, #f7ba2b 0%, #ea5358 100%);
   width: 360px;

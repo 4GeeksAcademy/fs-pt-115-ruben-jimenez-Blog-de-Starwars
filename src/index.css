@@ -1,18 +1,4 @@
-.contaoner-card-home {
-    display: flex;
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    scroll-behavior: smooth;
-    gap: 16px;
-}
-.contaoner-card-home .card img {
-  display: block; /* elimina espacios inline y mejora layout */
-  width: 100%;
-  max-width: 360px; /* ancho máximo deseado */
-  height: auto; /* mantiene la proporción original */
-  max-height: 200px; /* límite vertical opcional */
-  object-fit: cover; /* opcional: recorta la imagen si es necesario */
-}
-*body{
-  background: #dd720e;
+
+body{
+  background: #dd720e !important;
 }
