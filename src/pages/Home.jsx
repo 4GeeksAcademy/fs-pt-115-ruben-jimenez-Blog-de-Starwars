@@ -6,38 +6,47 @@ import { Card } from "../components/Card.jsx";
 
 export const Home = () => {
 	const { store } = useGlobalReducer()
-	
-	
+
+
 
 	return (
 		<>
-		<div className="contaoner-card-home  slider-container pb-3">
-			<h1>Characters </h1>
-			{
-				store.characters.map(character => (
-					<Card key={character.id} character={character} nija="character"  />
-				))
-			}
+			<div className="d-flex justify-content-center align-items-center">
+				<h1>Characters </h1>
+			</div>
+			<div className="contaoner-card-home  slider-container pb-3">
 
-		</div >
-		<div className="contaoner-card-home bg-transparent border-0 ">
-			<h1>Akatsuki</h1>
-			{
-				store.akatsuki.map(character => (
-					<Card key={character.id} character={character} nija="akatsuki" />
-				))
-			}
+				{
+					store.characters.map(character => (
+						<Card key={character.id} character={character} nija="character" />
+					))
+				}
 
-		</div >
-		<div className="contaoner-card-home p-2" style={{ backgroundColor: 'transparent' }}>
-			<h1>Tailed Beasts</h1>
-			{
-				store.tailedBeasts.map(character => (
-					<Card key={character.id} character={character} nija="beasts" />
-				))
-			}
+			</div >
+			<div className="d-flex justify-content-center align-items-center">
+				<h1>Akatsuki</h1>
+			</div>
+			<div className="contaoner-card-home bg-transparent border-0 ">
+				
+				{
+					store.akatsuki.map(character => (
+						<Card key={character.id} character={character} nija="akatsuki" />
+					))
+				}
 
-		</div >
+			</div >
+			<div className="d-flex justify-content-center align-items-center">
+				<h1>Tailed Beasts</h1>
+			</div>
+			<div className="contaoner-card-home p-2" style={{ backgroundColor: 'transparent' }}>
+				
+				{
+					store.tailedBeasts.map(character => (
+						<Card key={character.id} character={character} nija="beasts" />
+					))
+				}
+
+			</div >
 		</>
 	);
 }; 
