@@ -1,4 +1,25 @@
+body {
+  background-image: url("assets/img/fondo-de-arte-digital-de-japon.jpg") ;
+  background-repeat: no-repeat;
+  /* Evita repeticiones si la imagen es más pequeña que la ventana */
+  background-position: center center;
+  /* Centra la imagen horizontal y verticalmente */
+  background-size: cover;
+  /* Escala la imagen para cubrir todo el fondo */
+  /* renderizado*/
+  image-rendering: -webkit-optimize-contrast;
+  /* Chrome / WebKit */
+  image-rendering: crisp-edges;
+  /* Firefox, Opera, otros */
+}
 
-body{
-  background: #dd720e !important;
+/* fondo 2 */
+@media (min-resolution: 2dppx),
+(min-device-pixel-ratio: 2) {
+  body {
+    background-image: url(assets/img/2151546202.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+  }
 }

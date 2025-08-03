@@ -1,16 +1,17 @@
 .card-character {
     display: flex;
     flex-wrap: wrap;
-    max-width: 2000px;
-    margin: 20px auto;
+
+    max-width: 100%;
+    height: 84vh; /* Usamos el % de la altura visible */
+    margin: 0 auto;
     border: 1px solid #ccc;
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    background-color: #ffe5b4; /* naranja pálido */
+    background-color: #ffe5b4;/* el naranja */
     font-family: Arial, sans-serif;
 }
-
 /* img */
 .card-img {
     flex: 0 0 300px;
@@ -37,7 +38,7 @@
     flex: 1;
     padding: 20px;
     overflow-y: auto;
-    max-height: 600px;
+    max-height: 750px;
 }
 
 .card-title {

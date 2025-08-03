@@ -12,7 +12,7 @@ export const Home = () => {
 	return (
 		<>
 			<div className="d-flex justify-content-center align-items-center">
-				<h1>Characters </h1>
+				<h1 className="text-black">Characters </h1>
 			</div>
 			<div className="contaoner-card-home  slider-container pb-3">
 
@@ -24,9 +24,9 @@ export const Home = () => {
 
 			</div >
 			<div className="d-flex justify-content-center align-items-center">
-				<h1>Akatsuki</h1>
+				<h1 className="text-black">Akatsuki</h1>
 			</div>
-			<div className="contaoner-card-home bg-transparent border-0 ">
+			<div className="contaoner-card-home  slider-container pb-3">
 				
 				{
 					store.akatsuki.map(character => (
@@ -36,7 +36,7 @@ export const Home = () => {
 
 			</div >
 			<div className="d-flex justify-content-center align-items-center">
-				<h1>Tailed Beasts</h1>
+				<h1 className="text-black" >Tailed Beasts</h1>
 			</div>
 			<div className="contaoner-card-home p-2" style={{ backgroundColor: 'transparent' }}>
 				

@@ -49,7 +49,7 @@ export const Navbar = () => {
 		<nav className="navbar navbar-light bg-light">
 			<div className="container">
 				<Link to="/">
-					<img src="https://api-dattebayo.vercel.app/assets/images/logo.png" alt="Bootstrap" width="30" height="24"></img>
+					<img src="https://api-dattebayo.vercel.app/assets/images/logo.png" alt="Bootstrap" width="60" height="50"></img>
 				</Link>
 				{/* //----------------- intento 24 buscador */}
 				<div className="search-wrapper" ref={inputRef} >

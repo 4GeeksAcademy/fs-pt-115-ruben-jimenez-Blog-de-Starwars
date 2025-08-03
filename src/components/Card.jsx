@@ -5,9 +5,8 @@ import "../css/card.css"
 export const Card = ({ character, nija }) => {
     const { store, dispatch } = useGlobalReducer()
 
-       
-
-    console.log(store.favoritos)
+    // console.log(store.favoritos)
+    
     return (
         <div className="card" style={{ width: 280, flex: '0 0 auto' }}>
             <img src={character.images[0]} alt="Imagen de ejemplo" />

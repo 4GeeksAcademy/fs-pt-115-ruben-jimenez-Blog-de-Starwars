@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom";
 import useGlobalReducer from "../hooks/useGlobalReducer"
 import { useEffect, useState } from "react";
 import "../css/cardInfoCharacter.css"
+import { Link } from "react-router-dom";
 
 export const CardInfoCharacter = () => {
     const { store } = useGlobalReducer();
@@ -42,15 +43,19 @@ export const CardInfoCharacter = () => {
     return (
         <div className=" card-character">
             <div className=" card-img">
-            {urlStore.images?.map((img, index) => (
-                <img
-                    key={index}
-                    src={img}
-                    className="card-img-top"
-                    alt={urlStore.name}
-                />
-            ))}
-            </div>
+                {urlStore.images?.map((img, index) => (
+                    <img
+                        key={index}
+                        src={img}
+                        className="card-img-top"
+                        alt={urlStore.name}
+                    />
+                ))} 
+              
+                <Link to={'/'}>
+                    <button className="btn info-btn" id="info-btn"> Volver </button>
+                </Link>
+             </div>
             <div className="card-body">
                 <h5 className="card-title">{urlStore.name}</h5>
 
@@ -73,7 +78,7 @@ export const CardInfoCharacter = () => {
                 {/* Familia */}
                 {urlStore.family && (
                     <>
-                        {Object.entries(urlStore.family?? {}).map(([relation, member]) => (
+                        {Object.entries(urlStore.family ?? {}).map(([relation, member]) => (
                             <p key={relation} className="card-text">
                                 <strong>{relation.toUpperCase()}:</strong> {member}
                             </p>
@@ -81,7 +86,7 @@ export const CardInfoCharacter = () => {
                     </>
                 )}
                 {/*  si family es "undefined", se convierte en un objeto vacío {}, y Object.entries({}) retorna un array vacío. No causa error y no renderiza nada. */}
-                 {/* Rank */}
+                {/* Rank */}
                 {urlStore.rank?.ninjaRank?.["Part I"] && (
                     <p className="card-text">
                         <strong>Rank Part I:</strong> {urlStore.rank.ninjaRank["Part I"]}
@@ -145,9 +150,9 @@ export const CardInfoCharacter = () => {
                         {Object.entries(urlStore.voiceActors).map(([lang, actors]) => (
                             <p key={lang} className="card-text">
                                 <strong>Voice ({lang}):</strong> {Array.isArray(actors) ? actors.join(", ") : String(actors)}
-                            </p>  
+                            </p>
                         ))}
-                    </> 
+                    </>
                 )}{/* Array.isArray() devuelve "false" para valores que no son [arrays], incluso si parecen tener estructura de lista (como objetos con índices e length) */}
             </div>
         </div>
